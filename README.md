@@ -1,6 +1,6 @@
 # SFighterAI
 
-[简体中文](README_CN.md) | English
+[简体中文](README_CN.md) | English | [Español](README_ES.md)
 
 This project is an AI agent trained using deep reinforcement learning to beat the final boss in the game "Street Fighter II: Special Champion Edition". The AI agent makes decisions based solely on the game screen's RGB pixel values. In the provided save state, the agent achieves a 100% win rate in the first round of the final level (overfitting occurs, see the [Running Tests](#running-tests) section for discussion).
 
@@ -20,7 +20,7 @@ The game configuration files are stored in the `data/` folder, and the main proj
 
 ## Running Guide
 
-This project is based on the Python programming language and primarily utilizes standard libraries like [OpenAI Gym Retro](https://retro.readthedocs.io/en/latest/getting_started.html) and [Stable-Baselines3](https://stable-baselines3.readthedocs.io/en/master/) .The Python version used is 3.8.10, and it is recommended to use [Anaconda](https://www.anaconda.com) to configure the Python environment. The following setup process has been tested on Windows 11. Below are console/terminal/shell commands.
+This project is based on the Python programming language and primarily utilizes standard libraries like [OpenAI Gym Retro](https://retro.readthedocs.io/en/latest/getting_started.html) and [Stable-Baselines3](https://stable-baselines3.readthedocs.io/en/master/). The Python version used is 3.8.10, and it is recommended to use [Anaconda](https://www.anaconda.com) to configure the Python environment. The following setup process has been tested on Windows 11. Below are console/terminal/shell commands.
 
 ### Environment Setup
 
@@ -44,7 +44,9 @@ To run the program, you will also need the game ROM file for "Street Fighter II:
 
 Once you have legally obtained the game ROM file, copy it to the aforementioned gym-retro game data folder and rename it to `rom.md`. At this point, the environment setup is complete.
 
-Note: If you want to record videos of the AI agent's gameplay, you will need to install [ffmpeg](https://ffmpeg.org/).
+Note 1: If you want to manually capture save states and find memory variables in the game, you can use the gym-retro integration ui. Copy `data/Gym Retro Integration.exe` to the parent menu (two levels up, `retro/` folder) of the aforementioned gym-retro game data folder.
+
+Note 2: If you want to record videos of the AI agent's gameplay, you will need to install [ffmpeg](https://ffmpeg.org/).
 
 ```bash
 conda install ffmpeg
@@ -87,7 +89,7 @@ tensorboard --logdir=logs/
 Open the default Tensorboard service address `http://localhost:6006/` in your browser to view interactive graphs of the training process.
 
 ## Acknowledgements
-This project uses open-source libraries such as [OpenAI Gym Retro](https://retro.readthedocs.io/en/latest/getting_started.html)、[Stable-Baselines3](https://stable-baselines3.readthedocs.io/en/master/). The contributions of all the developers to the open-source community are appreciated!
+This project uses open-source libraries such as [OpenAI Gym Retro](https://retro.readthedocs.io/en/latest/getting_started.html), [Stable-Baselines3](https://stable-baselines3.readthedocs.io/en/master/). The contributions of all the developers to the open-source community are appreciated!
 
 Two papers that had a significant impact on this project:
 
